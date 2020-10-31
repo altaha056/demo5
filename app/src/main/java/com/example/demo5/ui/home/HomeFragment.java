@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.demo5.R;
+import com.example.demo5.databinding.FragmentHomeBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,23 +26,29 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     AdapterRecycleView1 adapterRecycleView1;
-    RecyclerView recyclerView;
-
-    private HomeViewModel homeViewModel;
+    FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        binding = FragmentHomeBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        List<ModelData> data=new ArrayList<>();
+        data.add(new ModelData("Taverns","Gather with folks, join the party, and sip the grape.",R.drawable.taverns));
+        data.add(new ModelData("Aurora","The most mesmerizing theatre by the nature.",R.drawable.myth));
+        data.add(new ModelData("Mythology","Valhalla calling your name through the boat we sailed.",R.drawable.myth3));
+        data.add(new ModelData("Saga","Once upon a time when a wolf as big as mountain.",R.drawable.myth2));
+        data.add(new ModelData("Norsemen","Become the warriors and travel around the world!",R.drawable.ship));
+        data.add(new ModelData("Brotherhood","One tribe, one clan, one blood.",R.drawable.myth));
+
+        adapterRecycleView1=new AdapterRecycleView1(data);
+        binding.recycle1.setAdapter(adapterRecycleView1);
+        binding.recycle1.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+        binding.recycle1.setOverScrollMode(View.OVER_SCROLL_NEVER);
+
     }
 }
 
