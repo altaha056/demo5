@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--tag menu berfungsi untuk menampung tag yang akan dijadikan list menu-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
+<!--membuat list menu kedalam bentuk grup-->
     <group android:checkableBehavior="single">
+        <!--membuat item pertama memiliki tulisan avengers dengan
+        id home-->
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Lesson" />
+            android:icon="@drawable/ic_icons8_avengers"
+            android:title="Avengers" />
+        <!--membuat item kedua memiliki tulisan x-men dengan
+        id gallery-->
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Stats" />
+            android:icon="@drawable/ic_icons8_x_men"
+            android:title="X-Men" />
+        <!--membuat item pertama memiliki tulisan guardian of galaxy dengan
+        id slideshow-->
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Achievement" />
+            android:icon="@drawable/ic_gotglogo"
+            android:title="Guardian of Galaxy" />
     </group>
 </menu>

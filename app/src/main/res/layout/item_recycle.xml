@@ -1,11 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:minHeight="175dp"
     android:layout_height="wrap_content">
-
+<!--membuat objek cardview yang akan dibuat menjadi recycle view
+satu objek akan diduplikasi sebanyak jumlah data yang dimasukkan-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="175dp"
+        android:minHeight="175dp"
         android:layout_centerInParent="true"
         android:layout_margin="15dp"
         android:clipToPadding="true"
@@ -34,7 +37,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp"
                 android:fontFamily="@font/ubuntu_medium"
-                android:text="Aurora"
+                android:text="Alta Malfoy"
                 android:textColor="#FFFFFF"
                 android:textSize="42dp" />
 

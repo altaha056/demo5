@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="end">
-
+<!--File utama yang akan memberikan tampilan dari fragmen
+yang sudah ditentukan-->
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"

@@ -1,5 +1,6 @@
-package com.example.demo5.ui.home;
+package com.example.demo5.ui.home;/*Menginisiasi nama package dari project agar tidak terjadi crash dengan projek lain ketika diupload ke internet misal play store*/
 
+/*melakukan impor library yang dibutuhkan class*/
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +16,15 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+/*membuat class public untuk mengatur activity dari recycleview dengan extend dari library recyclerview*/
 public class AdapterRecycleView1 extends RecyclerView.Adapter<AdapterRecycleView1.Holder> {
 
+    /*membuat array list untuk menampung data dari model data*/
     List<ModelData>data=new ArrayList<>();
 
     public AdapterRecycleView1(List<ModelData> data) {
         this.data = data;
-    }
+    }/*membuat konstruktor untuk menginisialisasi data dari model data*/
 
     @NonNull
     @Override

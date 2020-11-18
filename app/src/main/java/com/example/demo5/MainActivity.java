@@ -1,5 +1,5 @@
-package com.example.demo5;
-
+package com.example.demo5;/*Menginisiasi nama package dari project agar tidak terjadi crash dengan projek lain ketika diupload ke internet misal play store*/
+/*melakukan import library yang dibutuhkan*/
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Belum ada :(", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

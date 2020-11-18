@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--deklarasi file xml-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.demo5">
+    package="com.example.demo5"><!--inisialiasasi namespace yang digunakan untuk memudahkan penambahan atribut-->
 
     <application
         android:allowBackup="true"
@@ -14,11 +14,13 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.Demo5.NoActionBar">
             <intent-filter>
+                <!--membuat intent untuk menghubungkan ke file lain-->
                 <action android:name="android.intent.action.MAIN" />
-
+<!--membuat launcher pada file main activity untuk dijalankan pertama kali ketika aplikasi dihidupkan-->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--meta data merupakan data yang menjelaskan data. biasa dibutuhkan ketika memakai font yang berbeda-->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
